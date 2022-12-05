@@ -1,0 +1,81 @@
+.blind{
+    position: absolute;
+    width: 1px; height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+}
+body{
+    min-width: 320px;
+    width: 100%;
+    color: #333;
+}
+body.hidden{
+    overflow: hidden;
+    /* 스크롤 X */
+}
+body.hidden::after{
+    content: '';
+    position: fixed;
+    top: 0;left: 0;right: 0;bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 11;
+}
+
+
+
+
+
+/* 상단으로 이동 */
+.quick{
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+    right: 10px; bottom: -100px;
+    width: 50px; 
+    border: 1px solid #e9e9e9;
+    background-color: rgba(255,255,255,0.7);
+    z-index: 20;
+    transition: 0.3s;
+}
+.quick.show{
+    bottom: 50px;
+    visibility: visible;
+    opacity: 1;
+}   
+.quick li{
+    position: relative;
+    padding: 5px;
+    border-top: 1px solid #e9e9e9;
+}
+
+.quick .link-talk a{
+    height: 30px;
+    display: block;
+    background-image: url('../assets/images/icon/talk.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 35px 30px;
+    margin-top: 4px;
+}
+.quick .link-talk .title{
+    display: block;
+    padding-top: 10px;
+    font-size: 11px;
+    line-height: 13px;
+    letter-spacing: -0.04em;
+    font-weight: 500;
+    color: #595959;
+    text-align: center;
+}
+
+
+.quick .btn-top a{
+    display: block;
+    height: 24px;
+    padding: 24px 20px 14px;
+    background-image: url('../assets/images/icon/scrollTop.png');
+    background-repeat: no-repeat;
+    background-size: 19px auto;
+    background-position: center;
+}
