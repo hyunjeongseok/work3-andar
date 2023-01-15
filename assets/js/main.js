@@ -1,16 +1,25 @@
 //aside
 $(function(){
 
-    $('.header .btn-category').click(function(e){ //e -> 이벤트
-        e.preventDefault(); //링크이벤트 막기
+    /**
+     * @사이드메뉴오픈
+     * function(e) -> 이벤트
+     * e.preventDefault -> 링크 이벤트 막기
+     */
+    $('.header .btn-category').click(function(e){
+        e.preventDefault();
 
         $('.side-menu').addClass('on');
         $('body').addClass('hidden');
         
      })
 
+    /**
+     * @특정영역제외클릭
+     * (e.target) -> 특정영역제외 클릭(자바스크립트)
+     * .length -> 배열의 길이
+     */
      $('body').click(function(e){
-        // console.log(e.target); 특정영역제외 클릭(자바스크립트)
 
         if($(e.target).has('.side-menu').length){
             $('body').removeClass('hidden');
@@ -18,6 +27,7 @@ $(function(){
         }
      })
 
+     
      $('.btn-close').click(function(e){ //e -> 이벤트
         e.preventDefault(); //링크이벤트 막기
         $('body').removeClass('hidden');
@@ -25,7 +35,10 @@ $(function(){
      })
 
 
-    //gnb-전체메뉴
+    /**
+     * @gnb메뉴더보기클릭
+     * slideToggle() -> 요소가 위아래로 나타나거나 사라지는 방식
+     */
     $('#allMenu').click(function (e) { 
         e.preventDefault();
         $('.header .group-all').stop().slideToggle();
@@ -33,8 +46,11 @@ $(function(){
 
     });
 
-//aside 아코디언
 
+    /**
+     * @사이드메뉴아코디언
+     * $(this).siblings() -> 상위태그(.nav)의 형제
+     */
     $('.side-menu .nav').click(function(e){
         e.preventDefault();
 
@@ -44,7 +60,12 @@ $(function(){
         
     })
 
-    // header fixed 스크롤
+    /**
+     * @header스크롤
+     * $(this).scrollTop -> 상위태그의 스크롤이 0보다 높을 때
+     * current > lastScroll : 현재스크롤값이 마지막스크롤(0)보다 높을때
+     * $(window)trigger('scroll') -> 강제로 한번 스크롤한다는 의미
+     */
     let lastScroll = 0; //초기화
     $(window).scroll(function(){
         const current = $(this).scrollTop();
@@ -54,8 +75,6 @@ $(function(){
         } else {
             $('.header').removeClass('fixed');
         }   
-
-        
 
         if(current > lastScroll){ //내릴때
             $('.quick').removeClass('show')
@@ -71,41 +90,30 @@ $(function(){
             
         }
 
-
     })
     $(window).trigger('scroll');
-    // 한번 스크롤 강제로
 
 
-    
-
-// top banner
-setInterval(function(){
-    $('.sc-topBanner .banner-wrap > .banner-slide:first')
-        .fadeOut(1000)
-        .next()
-        .fadeIn(1000)
-        .end()
-        .appendTo('.banner-wra');
-},5000);
-
-// 
-const bannerSlide = new Swiper(".sc-banner", {
-    loop:true,
-    speed: 500, //페이드 속도
-    effect: 'fade', 
-    autoplay:{
-        delay:3000,
-        disableOnInteraction: false,
-    },
-});
+    /**
+     * @topbanner슬라이드
+     * speed -> 슬라이드 넘어가는 속도
+     */
+    const bannerSlide = new Swiper(".sc-banner", {
+        loop:true,
+        speed: 500,
+        effect: 'fade', 
+        autoplay:{
+            delay:3000,
+            disableOnInteraction: false,
+        },
+    });
 
 
 
-
-
-// 메인 비주얼 슬라이드
-
+    /**
+     * @메인비주얼슬라이드
+     * effect:fade -> 슬라이드 넘어갈때 페이드효과
+     */
     const visual = new Swiper(".visual", {
         pagination: {
           el: ".swiper-pagination",
@@ -120,28 +128,26 @@ const bannerSlide = new Swiper(".sc-banner", {
     });
 
 
-// 상품 슬라이드(레깅스,브라탑,세트)
-
+    /**
+     * @상품슬라이드
+     * freeMode -> 슬라이드 자유롭게 넘기기
+     */
     const proslide = new Swiper(".sc-cate .swiper", {
         slidesPerView:2.1,
         spaceBetween:10,
         freeMode:true,
-        // 슬라이드 자유롭게
     });
 
 
 
-
-
-
-
-
-
-
-
-
-//상단이동 클릭
-//제이쿼리 이벤트를 자바스크립트로 해봄
+    /**
+     * @상단스크롤버튼
+     * jQuery이벤트를 JavaScript로 해보기
+     * querySelector -> 특정 name,id,class를 제한하지 않고 css선택자를 사용하여 요소를 찾는것
+     * addEventListener -> 이벤트 등록하기
+     * ()=> -> 화살표함수 function()과 동일
+     * scrollTo(behavior) -> 부드러운 스크롤링
+     */
     const topBtnElement = document .querySelector('.btn-top');
 
     topBtnElement.addEventListener('click',()=>{

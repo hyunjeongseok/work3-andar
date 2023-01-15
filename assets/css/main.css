@@ -36,8 +36,6 @@
 
 
 /* common */
-.goods-list{}
-.goods-list .goods-item {}
 .goods-list .goods-item a{display: block;}
 .goods-list .img-wrap{ position: relative; }
 .goods-list .img-wrap img{width: 100%;}
@@ -76,14 +74,13 @@
 
 
 /* sc-theme */
+.sc-theme .intro-area .img-box img{width: 100%;}
 .sc-theme .intro-area .info-wrap{ padding: 20px 16px 20px; }
 .sc-theme .intro-area .info-wrap .text-box{display: block; color: #333; letter-spacing: -0.05em;}
 .sc-theme .intro-area .info-wrap .title{ font-size: 26px; line-height: 35px; font-weight: 700; }
 .sc-theme .intro-area .info-wrap .desc{ padding: 14px 0 28px; font-size: 16px; line-height: 26px; font-weight: 400; }
 .sc-theme .intro-area .info-wrap .btn-more{ display: inline-block; background: #1e1e1e; border-radius: 2px; border: 1px solid #1e1e1e; color: #fff; padding: 8px 47px 8px 18px; font-size: 14px; line-height: 20px; letter-spacing: -0.03em; font-weight: 500; background-image: url('../images/icon/move.png'); background-repeat: no-repeat; background-size: 15px auto; background-position: calc(100% - 18px) center; }
-.sc-theme .group-theme:last-child{
-    padding-top: 40px;
-}
+.sc-theme .group-theme:last-child{ padding-top: 40px; }
 
 
 /* 브랜드스토리 */
@@ -101,7 +98,7 @@
 .sc-cate .group-cate .title{ font-size: 20px; line-height: 29px; letter-spacing: -0.05em; font-weight: 700; padding: 30px 16px 22px; }
 .sc-cate .group-cate .add{ display: inline-block; border: 1px solid rgba(142, 31, 41, 0.5); padding: 5px 6px; margin: 17px 0 5px; line-height: 1; outline-color: 1px; font-size: 9px; font-weight: 500; color: #8e1f28; }
 .sc-cate .group-cate{ position: relative; }
-.sc-cate .group-cate .link-all{ display: block; position: absolute; top: 30px; right: 16px; padding: 0 5px; font-size: 14px; line-height: 1.5; }
+.sc-cate .group-cate .link-all{ display: flex; align-items: center; position: absolute; top: 30px; right: 16px; padding: 0 5px; font-size: 14px; line-height: 1.5; }
 .sc-cate .group-cate .link-all::after{ content: ''; display: inline-block; width: 15px; height: 11px; margin: 0 0 2px 3px; background-image: url('../images/icon/product_all.png'); background-repeat: no-repeat; background-size: 15px auto; background-position: center; }
 .sc-cate .info-wrap{ margin-bottom: 17px; }
 
