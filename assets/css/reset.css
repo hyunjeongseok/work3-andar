@@ -13,4 +13,7 @@ body{
     font-family: 'Gilroy','NotoSansKR',sans-serif;
     color: #333;
     letter-spacing: -0.05em;
+    min-width: 320px;
+    width: 100%;
+    color: #333;
 }
