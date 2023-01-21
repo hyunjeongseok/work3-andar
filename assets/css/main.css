@@ -45,9 +45,9 @@
     padding: 15px 15px 17px 15px;
     text-align: left;
 }
-.goods-list em{ display: block; color:#8e1f29; font-size: 13px; line-height: 13px; font-weight: 400; width: 100%; }
+.goods-list em{ display: block; color:#8e1f29; font-size: 13px; line-height: 13px; font-weight: 600; width: 100%; }
 .goods-list .name{ padding: 10px 0; width: 100%; font-size: 13px; line-height: 17px; letter-spacing: -0.05em;}
-.goods-list .sale{ color:#8e1f29; font-size: 15px; font-weight: 500; margin-right: 5px; vertical-align: top; }
+.goods-list .sale{ color:#8e1f29; font-size: 15px; font-weight: 700; margin-right: 5px; vertical-align: top; }
 .goods-list .curr{ font-size: 15px; line-height: 16px; font-weight: 500; letter-spacing: -0.03em; vertical-align: top; }
 .goods-list .ori{ font-size: 13px; line-height: 18px; font-weight: 400; color: #8d8d8d; margin-left: 5px; text-decoration: line-through; }
 

@@ -170,13 +170,13 @@
 /* header */
 .header{ 
     position: fixed; 
-    top: 40px; width: 100%;
+    top: 40px;
+    width: 100%;
     z-index: 10;
 }
 .header .group-header{
     position: relative;
-    display: flex;  
-    /* align-items : strech */
+    display: flex; 
     height: 56px;
 }
 .header .group-header .logo{
@@ -236,14 +236,21 @@
     width: calc(100% - 33px);
     padding: 11px 0 11px 15px;
     overflow-x: auto;
-    /* 넘치면 스크롤 아니면 말아 */
 
 }
 .gnb .group-gnb .gnb-item{ position: relative; font-size: 16px; line-height: 23px; letter-spacing: -0.05em; font-weight: 400; }
 .gnb .group-gnb .title{
     position: absolute;
     top: 0; left: 0;
+    width: 100%;
     display: none;
+    padding: 11px 16px;
+    line-height: 23px;
+    background: #fff;
+    font-weight: 500;
+}
+.gnb .group-gnb .title.on{
+    display: block;
 }
 
 
@@ -251,6 +258,7 @@
     width: 28px; height: 28px;
     position: absolute;
     top: 50%; right: 10px;
+    z-index: 1;
 }
 .gnb .group-gnb .btn-open::after{
     content: '';
@@ -352,7 +360,6 @@
 }
 .footer .policy-list{
     padding: 12px 0;
-    display: flex;
 }
 .footer .policy-list li{
     position: relative;

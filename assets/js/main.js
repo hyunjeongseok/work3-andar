@@ -43,6 +43,7 @@ $(function(){
         e.preventDefault();
         $('.header .group-all').stop().slideToggle();
         $(this).toggleClass('on');
+        $('.group-gnb > .title').toggleClass('on');
 
     });
 

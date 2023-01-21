@@ -5,11 +5,11 @@
     clip: rect(0 0 0 0);
     margin: -1px;
 }
-body.hidden{
+.hidden{
     overflow: hidden;
     /* 스크롤 X */
 }
-body.hidden::after{
+.hidden::after{
     content: '';
     position: fixed;
     top: 0;left: 0;right: 0;bottom: 0;
